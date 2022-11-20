@@ -2,9 +2,19 @@ import React from "react";
 import Card from "./Card";
 import contacts from "../contacts";
 
-function createCard(contact) {
-   return(
-      <Card 
+// function createCard(contact) {
+//    return(
+     
+//    );
+// }
+
+function App() {
+    return (
+        <div>
+          <h1 className="heading">Monster Trio</h1>
+
+          {contacts.map((contact) => {
+           return <Card 
          key={contact.id} 
          id={contact.id}
          name={contact.name} 
@@ -12,15 +22,7 @@ function createCard(contact) {
          tel={contact.phone} 
          email={contact.email}
       />
-   );
-}
-
-function App() {
-    return (
-        <div>
-          <h1 className="heading">Monster Trio</h1>
-
-          {contacts.map(createCard)}
+          })}
 
           {/* <Card
         name={contacts[0].name}
